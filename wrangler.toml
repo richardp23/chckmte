@@ -1,0 +1,18 @@
+name = "chckmte"
+main = "src/worker.ts"
+compatibility_date = "2024-07-25"
+
+[build]
+command = "npm run build"
+
+[assets]
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*", "/auth/*"]
+
+[env.dev]
+# This section is for local development, and the variables inside
+# will be available in your Worker. You can add bindings here.
+# For example:
+# kv_namespaces = [
+#   { binding = "MY_KV_NAMESPACE", id = "..." }
+# ]
